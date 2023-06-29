@@ -13,17 +13,13 @@ class bcolors:
 contents = subprocess.Popen(["ls -l"], stdout=subprocess.PIPE, shell=True)
 (out, err) = contents.communicate()
 
-out = str(out)
-out = out.strip("b'total 4")
-out = out.split("\\")
+out = str(out).strip("b'total 4").split("\\")
 
 for i in out:
-    i = i.lstrip('n')
     i = i.split()
     
     if len(i) == 9:
         print(
-
               bcolors.PERMISSIONS +i[0],
               bcolors.USERGRP+ i[2],
               bcolors.GROUP+ i[3],
