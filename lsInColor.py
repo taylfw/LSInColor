@@ -16,7 +16,8 @@ contents = subprocess.Popen(["ls -l"], stdout=subprocess.PIPE, shell=True)
 out = str(out).strip("b'total 4").split("\\")
 
 for i in out:
-    i = i.split()
+
+    i = i.lstrip('n').split()
     
     if len(i) == 9:
         print(
