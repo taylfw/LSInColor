@@ -2,7 +2,7 @@
 
 lsInColor.py is being developed to help the understanding of the linux file/permission structure.
 
-Each element of the file is split into diferent colors to make it more readable for humans. 
+Each element of the file is assigned to a color to make it more readable for humans. 
 
 To make this tool useful globally, do the following 2 commands as root:
 
