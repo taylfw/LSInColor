@@ -15,3 +15,6 @@ Then copy it to your bin directory in the root of the file structure:
 cp lsInColor.py /bin
 ```
 You should be able to execute lsInColor.py from any directory
+
+## Example Output:
+![lsInColor](https://raw.githubusercontent.com/taylfw/LSInColor/main/img/Output.png?raw=true)
