@@ -9,6 +9,8 @@ class bcolors:
     USEROWNER= '\033[92m'
     SIZE = '\033[93m'
     TIME = '\033[91m'
+    SYM = '\033[31m'
+    LINKD = '\033[36m'
 
 contents = subprocess.Popen(["ls -l"], stdout=subprocess.PIPE, shell=True)
 (out, err) = contents.communicate()
@@ -30,5 +32,16 @@ for i in out:
               bcolors.TIME + i[7],  
               bcolors.FILE + i[8]
             )
-
-
+    elif len(i) == 11:
+        print(
+              bcolors.PERMISSIONS +i[0],
+              bcolors.USEROWNER+ i[2],
+              bcolors.GROUPOWNER+ i[3],
+              bcolors.SIZE + i[4],
+              bcolors.TIME + i[5],
+              bcolors.TIME + i[6], 
+              bcolors.TIME + i[7],  
+              bcolors.FILE + i[8],
+              bcolors.SYM + i[9],
+              bcolors.LINKD + i[10]
+        )
