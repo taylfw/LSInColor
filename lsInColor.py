@@ -37,7 +37,8 @@ for i in out:
               bcolors.TIME + i[5],
               bcolors.TIME + i[6], 
               bcolors.TIME + i[7],  
-              bcolors.DIR + i[8]
+              bcolors.DIR + i[8],
+
             )
     # Coloring for Symbolic links.
     elif len(i) == 11:
@@ -54,6 +55,20 @@ for i in out:
               bcolors.SYM + i[9],
               bcolors.LINKD + i[10]
         )
+    # checks if the directory has space in title.
+    elif len(i) == 10 and i[0][0] == 'd':
+        print(
+              bcolors.PERMISSIONS +i[0],
+              bcolors.USEROWNER+ i[2],
+              bcolors.GROUPOWNER+ i[3],
+              bcolors.SIZE + i[4],
+              bcolors.TIME + i[5],
+              bcolors.TIME + i[6], 
+              bcolors.TIME + i[7],  
+              bcolors.DIR + i[8],
+              bcolors.DIR + i[9]
+            )
+
     elif len(i) == 9:
         print(
               bcolors.PERMISSIONS +i[0],
@@ -65,3 +80,4 @@ for i in out:
               bcolors.TIME + i[7],  
               bcolors.FILE + i[8]
             )
+        
