@@ -89,7 +89,7 @@ for i in out:
         
         
         print(
-            bcolors.SIZE + i[0],
+            bcolors.SIZE + 'total',
             bcolors.SIZE + i[1]
             )
         
