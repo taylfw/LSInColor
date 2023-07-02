@@ -18,7 +18,7 @@ contents = subprocess.Popen(["ls -l"], stdout=subprocess.PIPE, shell=True)
 (out, err) = contents.communicate()
 
 # Sanatize the output
-out = str(out).strip("b'total 4").split("\\")
+out = str(out).split("\\")
 
 # For each file in output, check the length and color accordingly.
 for i in out:
@@ -26,11 +26,13 @@ for i in out:
     i = i.lstrip('n').split()
 
     
+    
     # Check if the output is a directory.
     if len(i) == 9 and i[0][0] == 'd':
         
         print(
               bcolors.PERMISSIONS +i[0],
+              bcolors.SYM + i[1],
               bcolors.USEROWNER+ i[2],
               bcolors.GROUPOWNER+ i[3],
               bcolors.SIZE + i[4],
@@ -45,6 +47,7 @@ for i in out:
 
         print(
               bcolors.PERMISSIONS +i[0],
+              bcolors.SYM + i[1],
               bcolors.USEROWNER+ i[2],
               bcolors.GROUPOWNER+ i[3],
               bcolors.SIZE + i[4],
@@ -59,6 +62,7 @@ for i in out:
     elif len(i) == 10 and i[0][0] == 'd':
         print(
               bcolors.PERMISSIONS +i[0],
+              bcolors.SYM + i[1],
               bcolors.USEROWNER+ i[2],
               bcolors.GROUPOWNER+ i[3],
               bcolors.SIZE + i[4],
@@ -72,6 +76,7 @@ for i in out:
     elif len(i) == 9:
         print(
               bcolors.PERMISSIONS +i[0],
+              bcolors.SYM + i[1],
               bcolors.USEROWNER+ i[2],
               bcolors.GROUPOWNER+ i[3],
               bcolors.SIZE + i[4],
@@ -79,5 +84,12 @@ for i in out:
               bcolors.TIME + i[6], 
               bcolors.TIME + i[7],  
               bcolors.FILE + i[8]
+            )
+    elif len(i) == 2:
+        
+        
+        print(
+            bcolors.SIZE + i[0],
+            bcolors.SIZE + i[1]
             )
         
