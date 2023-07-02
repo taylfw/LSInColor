@@ -20,6 +20,20 @@ contents = subprocess.Popen(["ls -l"], stdout=subprocess.PIPE, shell=True)
 # Sanatize the output
 out = str(out).split("\\")
 
+
+print(
+              bcolors.PERMISSIONS +"Permissions",
+              bcolors.SYM + "Link Count",
+              bcolors.USEROWNER+ "User Owner",
+              bcolors.GROUPOWNER+ "Group Owner",
+              bcolors.SIZE + "Size",
+              bcolors.TIME + "Month",
+              bcolors.TIME + "day", 
+              bcolors.TIME + "Time",  
+              bcolors.FILE + "Name",
+              bcolors.SYM + "Symbolic",
+              bcolors.LINKD + "Link"
+        )
 # For each file in output, check the length and color accordingly.
 for i in out:
 
