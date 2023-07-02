@@ -17,4 +17,4 @@ cp lsInColor.py /bin
 You should be able to execute lsInColor.py from any directory
 
 ## Example Output:
-![lsInColor](https://raw.githubusercontent.com/taylfw/LSInColor/main/img/Output.png?raw=true)
+![lsInColor](https://github.com/taylfw/LSInColor/blob/main/img/OutPut.png?raw=true)
