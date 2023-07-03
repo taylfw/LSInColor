@@ -9,10 +9,10 @@ To make this tool useful globally, do the following 2 commands as root:
 ```bash
 chmod +x lsInColor.py
 ```
-Then copy it to your bin directory in the root of the file structure:
+Then copy it to your /usr/local/bin directory:
 
 ```bash
-cp lsInColor.py /bin
+cp lsInColor.py /usr/local/bin
 ```
 You should be able to execute lsInColor.py from any directory
 
